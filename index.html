@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis | Advanced Text Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sentiment Analysis</h1>
+            <p class="subtitle">Analyze the emotional tone of your text using advanced Natural Language Processing</p>
+        </header>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h2>How It Works</h2>
+                <p>Sentiment analysis uses natural language processing to determine the emotional tone of text. Our analyzer:</p>
+                <ul>
+                    <li>Evaluates text against a curated dictionary of words</li>
+                    <li>Assigns sentiment scores to individual words</li>
+                    <li>Considers context and negations</li>
+                    <li>Provides an overall sentiment classification</li>
+                </ul>
+            </div>
+        </section>
+
+        <main>
+            <div class="analysis-section">
+                <div class="input-container">
+                    <textarea id="textInput" placeholder="Enter your text here for sentiment analysis..."></textarea>
+                    <button id="analyzeBtn" class="primary-btn">Analyze Sentiment</button>
+                    <button id="historyBtn" class="secondary-btn">View Analysis History</button>
+                </div>
+
+                <div id="results" class="results-container hidden">
+                    <div class="result-card sentiment-score">
+                        <h3>Sentiment Score</h3>
+                        <div class="score-value"></div>
+                    </div>
+                    
+                    <div class="result-card classification">
+                        <h3>Classification</h3>
+                        <div class="classification-value"></div>
+                    </div>
+
+                    <div class="words-container">
+                        <div class="result-card positive-words">
+                            <h3>Positive Words</h3>
+                            <div class="positive-words-list"></div>
+                        </div>
+
+                        <div class="result-card negative-words">
+                            <h3>Negative Words</h3>
+                            <div class="negative-words-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="historySection" class="history-section hidden">
+                <h2>Analysis History</h2>
+                <div id="historyList" class="history-list"></div>
+            </div>
+        </main>
+
+        <div class="loading-spinner hidden">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created for IIT | Advanced Sentiment Analysis Tool</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html> 
